@@ -1,3 +1,80 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.btn {
+  padding: 5px 16px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(157, 77, 255);
+}
+
+.logo {
+  /* background-color: red; */
+  letter-spacing: 3px;
+  border: 2px solid black;
+  padding: 2px;
+}
+
+.apni {
+  padding: 5px 16px;
+  color: white;
+  background-color: rgb(90, 78, 255);
+}
+
+.cart {
+  position: relative;
+}
+
+.cart-number {
+  position: absolute;
+  bottom: 8px;
+  left: 15px;
+  font-size: 12px;
+  color: white;
+  padding: 1px 4px;
+  border-radius: 50%;
+  background-color: rgb(90, 78, 255);
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav-close{
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: red;
+  }
+  .nav-menu {
+    display: block;
+  }
+  .nav-buttons {
+    display: none;
+  }
+  .btn {
+    display: none;
+  }
+  .cart {
+    display: none;
+  }
+  .logo{
+    font-size: 13px;
+  }
+  .nav-menu:active{
+    .nav-close{
+        display: inline;
+    }
+    background-color: red;
+
+}
+}

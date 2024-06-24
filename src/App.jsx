@@ -1,16 +1,23 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
 import About from "./components/About";
 import Product from "./components/Product";
 import SingleProduct from "./components/SingleProduct";
 import Contact from "./components/Contact";
 import Cart from "./components/Cart";
 import ErrorPage from "./components/ErrorPage";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+      </style>
+
       <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -19,7 +26,6 @@ function App() {
           <Route path="/singleproduct/:id" element={<SingleProduct />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/*" element={<ErrorPage />} />
-          
         </Routes>
       </Router>
     </>
