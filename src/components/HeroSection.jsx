@@ -6,7 +6,7 @@ const HeroSection = ({ myData }) => {
 
   return (
     <>
-      <div className=" h-screen items-center flex  justify-center">
+      <div className="hero-section h-screen items-center flex  justify-center">
         <div className="flex w-5/12  ">
           <div className="flex flex-col ">
             <h1 className=" w-fit">Welcome to</h1>
@@ -24,9 +24,9 @@ const HeroSection = ({ myData }) => {
             </button>
           </div>
         </div>
-          <div className="flex  w-5/12  flex-col justify-center items-center">
+          {/* <div className="flex  w-5/12  flex-col justify-center items-center">
             <h1 className="">IMAGE NOT LOADED</h1>
-          </div>
+          </div> */}
       </div>
     </>
   );

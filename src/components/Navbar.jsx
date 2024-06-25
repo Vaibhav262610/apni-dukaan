@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { CgClose, CgMenu } from "react-icons/cg";
 import { FiShoppingCart } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+
+  const [openMenu , setOpenMenu] = useState(false)
+
   return (
     <>
       <div className="bg-gray-200 flex  justify-center fixed w-full">
@@ -17,7 +20,7 @@ const Navbar = () => {
             </NavLink>
           </div>
           <div>
-            <div className=" flex items-center gap-8">
+            <div className={ openMenu ? "flex active items-center gap-8" : "flex items-center gap-8"}>
               <ul className="nav-buttons flex items-center gap-12">
                 <li className="nav-text">
                   <NavLink className=" font-semibold" to="/">
@@ -43,7 +46,7 @@ const Navbar = () => {
               <div>
                 <button className="btn">Log In</button>
               </div>
-              <div className='cart'>
+              <div className="cart">
                 <NavLink to="cart">
                   <FiShoppingCart className="text-xl" />
                   <div className="cart-number">
@@ -51,8 +54,10 @@ const Navbar = () => {
                   </div>
                 </NavLink>
               </div>
-              <CgMenu className="text-2xl nav-menu" />
-              <CgClose className="text-2xl nav-close" />
+              <div className="mobile-navbar-btn">
+                <CgMenu name="menu-btn" className="text-2xl nav-menu" onClick={() => {setOpenMenu(true)}} />
+                <CgClose name="close-btn" className="text-2xl nav-menu close-btn" onClick={() => {setOpenMenu(false)}} />
+              </div>
             </div>
           </div>
         </div>
