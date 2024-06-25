@@ -5,7 +5,7 @@ const Services = () => {
     <>
         <div className=' bg-gray-200'>
             <div>
-                    <h1>SERVICES</h1>
+                    <h1 className='text-4xl justify-center items-center flex p-24'>SERVICES - PENDING</h1>
             </div>
         </div>
     </>

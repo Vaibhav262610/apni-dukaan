@@ -18,7 +18,7 @@ const Navbar = () => {
           </div>
           <div>
             <div className=" flex items-center gap-8">
-              <ul className="nav-buttons flex items-center gap-8">
+              <ul className="nav-buttons flex items-center gap-12">
                 <li className="nav-text">
                   <NavLink className=" font-semibold" to="/">
                     Home
