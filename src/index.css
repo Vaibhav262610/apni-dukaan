@@ -131,7 +131,13 @@ body {
   .footer{
     display: none;
   }
+  .main-contact{
+    padding-top: 7rem;
+  }
+  .google-map{
+    height: 400px;
 
+  }
 }
 
 
