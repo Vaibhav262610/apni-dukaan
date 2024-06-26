@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import HeroSection from './HeroSection'
 
+
 const About = () => {
+
 
   const data = {
     name : "Vaibhav Ecommerce"
@@ -9,7 +11,7 @@ const About = () => {
 
   return (
     <>
-      <HeroSection myData={data}/>
+      <HeroSection myData={{data}}/>
     </>
   )
 }
