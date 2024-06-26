@@ -13,6 +13,24 @@ body {
   background-color: rgb(157, 77, 255);
 }
 
+.footer{
+  background-color: rgb(3, 3, 65);
+}
+
+.shop-btn {
+  padding: 10px 16px;
+  color: white;
+  background-color: rgb(123, 52, 247);
+}
+
+.footer-icons{
+  border: 1px solid white;
+  padding: 5px;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+
+
 .logo {
   /* background-color: red; */
   letter-spacing: 3px;
@@ -80,6 +98,10 @@ body {
     opacity: 1;
     transform: translateX(0);
     z-index: 999;
+  }
+  
+  .hero-section-width{
+    width: 80%;
   }
 
   .nav-buttons {

@@ -4,8 +4,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-
-  const [openMenu , setOpenMenu] = useState(false)
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <>
@@ -20,25 +19,55 @@ const Navbar = () => {
             </NavLink>
           </div>
           <div>
-            <div className={ openMenu ? "flex active items-center gap-8" : "flex items-center gap-8"}>
+            <div
+              className={
+                openMenu
+                  ? "flex active items-center gap-8"
+                  : "flex items-center gap-8"
+              }
+            >
               <ul className="nav-buttons flex items-center gap-12">
                 <li className="nav-text">
-                  <NavLink className=" font-semibold" to="/">
+                  <NavLink
+                    onClick={() => {
+                      setOpenMenu(false);
+                    }}
+                    className=" font-semibold"
+                    to="/"
+                  >
                     Home
                   </NavLink>
                 </li>
                 <li className="">
-                  <NavLink className=" font-semibold" to="/about">
+                  <NavLink
+                    onClick={() => {
+                      setOpenMenu(false);
+                    }}
+                    className=" font-semibold"
+                    to="/about"
+                  >
                     About
                   </NavLink>
                 </li>
                 <li className="">
-                  <NavLink className=" font-semibold" to="/product">
+                  <NavLink
+                    onClick={() => {
+                      setOpenMenu(false);
+                    }}
+                    className=" font-semibold"
+                    to="/product"
+                  >
                     Products
                   </NavLink>
                 </li>
                 <li className="">
-                  <NavLink className=" font-semibold" to="/contact">
+                  <NavLink
+                    onClick={() => {
+                      setOpenMenu(false);
+                    }}
+                    className=" font-semibold"
+                    to="/contact"
+                  >
                     Contact
                   </NavLink>
                 </li>
@@ -55,8 +84,20 @@ const Navbar = () => {
                 </NavLink>
               </div>
               <div className="mobile-navbar-btn">
-                <CgMenu name="menu-btn" className="text-2xl nav-menu" onClick={() => {setOpenMenu(true)}} />
-                <CgClose name="close-btn" className="text-2xl nav-menu close-btn" onClick={() => {setOpenMenu(false)}} />
+                <CgMenu
+                  name="menu-btn"
+                  className="text-2xl nav-menu"
+                  onClick={() => {
+                    setOpenMenu(true);
+                  }}
+                />
+                <CgClose
+                  name="close-btn"
+                  className="text-2xl nav-menu close-btn"
+                  onClick={() => {
+                    setOpenMenu(false);
+                  }}
+                />
               </div>
             </div>
           </div>
