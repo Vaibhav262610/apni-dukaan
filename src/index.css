@@ -191,3 +191,17 @@ body {
   border: 1px solid;
   padding: 12px;
 } */
+
+.dark-mode{
+  background-color: rgb(161, 85, 255);
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: inset 0 0 10px grey; 
+  position: absolute; 
+  right: 4%;
+  bottom: 6%;
+  position: fixed;
+  
+}
