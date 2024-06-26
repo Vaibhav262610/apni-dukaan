@@ -127,10 +127,10 @@ body {
   .logo{
     font-size: 13px;
   }
-  /* .hero-section{
-    flex-direction: column;
-    gap-
-  } */
+
+  .footer{
+    display: none;
+  }
 
 }
 
