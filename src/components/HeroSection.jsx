@@ -1,11 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import { MdDarkMode } from "react-icons/md";
 
 const HeroSection = ({ myData }) => {
-  const { name } = myData;
-  
   const [darkMode, setDarkMode] = useState(false);
+  const { name } = myData;
   const toggleMode = () => {
     setDarkMode(!darkMode);
   };
@@ -29,9 +27,9 @@ const HeroSection = ({ myData }) => {
               </button>
             </div>
           </div>
-          <div className="dark-mode text-4xl" onClick={toggleMode}>
-            <MdDarkMode />
-          </div>
+          {/* <div className="dark-mode text-4xl">
+           
+          </div> */}
           {/* <div className="flex  w-5/12  flex-col justify-center items-center">
             <h1 className="">IMAGE NOT LOADED</h1>
             </div> */}
