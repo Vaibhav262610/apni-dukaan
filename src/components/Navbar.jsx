@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { CgClose, CgMenu } from "react-icons/cg";
 import { FiShoppingCart } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-
+  const { user, logout, loginWithRedirect, isAuthenticated } = useAuth0();
   return (
     <>
       <div className="bg-gray-200 flex  justify-center fixed w-full">
@@ -73,7 +74,22 @@ const Navbar = () => {
                 </li>
               </ul>
               <div>
-                <button className="btn">Log In</button>
+                {isAuthenticated ? (
+                  <button
+                    className="btn"
+                    onClick={() =>
+                      logout({
+                        logoutParams: { returnTo: window.location.origin },
+                      })
+                    }
+                  >
+                    Log Out
+                  </button>
+                ) : (
+                  <button className="btn" onClick={() => loginWithRedirect()}>
+                    Log In
+                  </button>
+                )}
               </div>
               <div className="cart">
                 <NavLink to="cart">

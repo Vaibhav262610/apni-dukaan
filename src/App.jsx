@@ -8,15 +8,8 @@ import ErrorPage from "./components/ErrorPage";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Darkmode from "./components/Darkmode";
-import { useState } from "react";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleMode = () => {
-    setDarkMode(!darkMode);
-  };
   return (
     <>
       <style>
@@ -35,7 +28,6 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/*" element={<ErrorPage />} />
           </Routes>
-          <Darkmode className={`${darkMode && "dark"}`} onClick={toggleMode} />
           <Footer />
         </Router>
       </div>
