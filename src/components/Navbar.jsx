@@ -27,7 +27,7 @@ const Navbar = () => {
                   : "flex items-center gap-8"
               }
             >
-              <ul className="nav-buttons flex items-center gap-12">
+              <ul className="nav-buttons flex items-center gap-8">
                 <li className="nav-text">
                   <NavLink
                     onClick={() => {
@@ -73,34 +73,38 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                {isAuthenticated ? (
-                  <button
-                    className="btn"
-                    onClick={() =>
-                      logout({
-                        logoutParams: { returnTo: window.location.origin },
-                      })
-                    }
-                  >
-                    Log Out
-                  </button>
-                ) : (
-                  <button className="btn" onClick={() => loginWithRedirect()}>
-                    Log In
-                  </button>
-                )}
+                  {isAuthenticated ? (
+                    <div className="flex gap-8">
+                      <button
+                        className="btn"
+                        onClick={() =>
+                          logout({
+                            logoutParams: { returnTo: window.location.origin },
+                          })
+                        }
+                      >
+                        Log Out
+                      </button>
+                      <img src={user.picture} className="profile-pic" alt="" />
+                    </div>
+                  ) : (
+                    <button className="btn" onClick={() => loginWithRedirect()}>
+                      Log In
+                    </button>
+                  )}
+                </li>
+                <li>
+                  <div className="cart">
+                    <NavLink to="cart">
+                      <FiShoppingCart className="text-xl" />
+                      <div className="cart-number">
+                        <h1>10</h1>
+                      </div>
+                    </NavLink>
+                  </div>
                 </li>
               </ul>
-              <div className="">
-              </div>
-              <div className="cart">
-                <NavLink to="cart">
-                  <FiShoppingCart className="text-xl" />
-                  <div className="cart-number">
-                    <h1>10</h1>
-                  </div>
-                </NavLink>
-              </div>
+
               <div className="mobile-navbar-btn">
                 <CgMenu
                   name="menu-btn"
