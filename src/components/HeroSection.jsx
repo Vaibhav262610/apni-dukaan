@@ -18,9 +18,9 @@ const HeroSection = ({ myData }) => {
             <div className="flex flex-col ">
               <h1 className=" w-fit">Welcome to</h1>
               {isAuthenticated ? (
-                <h1 className="text-4xl w-fit  font-bold uppercase ">{user.name}'s Store</h1>
+                <h1 className="text-3xl w-fit  font-bold uppercase ">{user.name}'s Store</h1>
               ) : (
-                <h1 className="text-4xl w-fit  font-bold ">Your Store</h1>
+                <h1 className="text-3xl w-fit  font-bold ">Your Store</h1>
               )}
               <p className="w-fit mt-8">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.

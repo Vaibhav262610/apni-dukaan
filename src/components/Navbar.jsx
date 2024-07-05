@@ -72,8 +72,7 @@ const Navbar = () => {
                     Contact
                   </NavLink>
                 </li>
-              </ul>
-              <div>
+                <li>
                 {isAuthenticated ? (
                   <button
                     className="btn"
@@ -90,6 +89,9 @@ const Navbar = () => {
                     Log In
                   </button>
                 )}
+                </li>
+              </ul>
+              <div className="">
               </div>
               <div className="cart">
                 <NavLink to="cart">
