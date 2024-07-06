@@ -287,3 +287,8 @@ body {
   cursor: pointer;
   
 }
+
+
+.box:hover{
+  border: 1px solid black;
+}

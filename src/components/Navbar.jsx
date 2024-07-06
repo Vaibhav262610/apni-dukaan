@@ -9,7 +9,7 @@ const Navbar = () => {
   const { user, logout, loginWithRedirect, isAuthenticated } = useAuth0();
   return (
     <>
-      <div className="bg-gray-200 flex  justify-center fixed w-full">
+      <div className="bg-gray-200 flex z-50  justify-center fixed w-full">
         <div className="flex  w-full py-4 px-8 items-center justify-between">
           <div>
             <NavLink to="/">
