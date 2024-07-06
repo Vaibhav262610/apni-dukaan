@@ -1,5 +1,5 @@
 import React from "react";
-
+import productList from "./products/ProductList";
 import AllProductPage from "./AllProduct";
 
 const Product = () => {
@@ -7,7 +7,7 @@ const Product = () => {
   return (
     <>
       <div className="">
-        <AllProductPage />
+        <AllProductPage data={productList} />
       </div>
     </>
   );
