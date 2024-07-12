@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Provider } from "react-redux";
 import store from "./store/store";
+import CartLogo from "./components/CartLogo";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Provider store={store}>
         <Router>
           <Navbar />
+          <CartLogo />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

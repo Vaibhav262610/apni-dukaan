@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  const product = useSelector((state) => state.apna);
+
   const { user, logout, loginWithRedirect, isAuthenticated } = useAuth0();
   return (
     <>
@@ -95,16 +95,7 @@ const Navbar = () => {
                     </button>
                   )}
                 </li>
-                <li>
-                  <div className="cart ">
-                    <NavLink to="cart">
-                      <FiShoppingCart className="text-xl" />
-                      <div className="cart-number">
-                        <h1>{product.length}</h1>
-                      </div>
-                    </NavLink>
-                  </div>
-                </li>
+              
               </ul>
 
               <div className="mobile-navbar-btn">
