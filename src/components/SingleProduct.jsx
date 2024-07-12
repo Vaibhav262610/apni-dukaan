@@ -18,8 +18,8 @@ const SingleProduct = () => {
 
   return (
     <>
-      <div className="flex gap-4 h-screen items-center flex-col justify-center ">
-        <div className="flex items-center w-9/12 justify-around gap-20 pt-4 rounded-md">
+      <div className="flex gap-4 h-screen items-center justify-center ">
+        <div className="flex  md:flex-row flex-col items-center w-9/12 justify-around gap-6 md:gap-20 md:pt-4 pt-20 rounded-md">
           <img
             src={myProduct.productImage}
             className="bg-gray-200 p-4 rounded-md"
@@ -27,7 +27,7 @@ const SingleProduct = () => {
             width={600}
             alt=""
           />
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-8 md:gap-12">
             <h1 className="text-4xl font-semibold">{myProduct.productName}</h1>
             <div className="flex flex-col">
               <h1 className="font-semibold text-gray-400 text-xl">PRICE</h1>
