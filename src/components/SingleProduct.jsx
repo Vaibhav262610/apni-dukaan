@@ -6,8 +6,8 @@ const SingleProduct = () => {
 
   return (
     <>
-      <div className="flex gap-4 items-center flex-col justify-center mt-12">
-        {products.map((items) => {
+      <div className="flex gap-4 items-center flex-col justify-center ">
+        {/* {products.map((items) => {
           return (
             <>
               <div className="flex items-center bg-gray-200 w-9/12 justify-around rounded-md">
@@ -17,7 +17,8 @@ const SingleProduct = () => {
               </div>
             </>
           );
-        })}
+        })} */}
+        <h1>LOADING.......</h1>
       </div>
     </>
   );
