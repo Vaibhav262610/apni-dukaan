@@ -6,7 +6,7 @@ const SingleProduct = () => {
 
   return (
     <>
-      <div className="flex gap-4 items-center flex-col justify-center ">
+      <div className="flex gap-4 h-screen items-center flex-col justify-center ">
         {/* {products.map((items) => {
           return (
             <>
