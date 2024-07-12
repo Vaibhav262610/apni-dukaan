@@ -29,17 +29,20 @@ const Cart = () => {
           {products.map((items) => {
             return (
               <>
-                <div className="flex items-center bg-gray-200 w-9/12 justify-around rounded-md">
+                <div className="flex flex-wrap  items-center bg-gray-200 w-11/12 md:w-9/12 justify-around rounded-md">
                   <img
                     src={items.productImage}
                     height={100}
                     width={100}
                     alt=""
                   />
+                  <div className="flex flex-col md:flex-row gap-1 md:gap-8">
+
                   <h1 className="font-semibold">{items.productName}</h1>
                   <h1 className="font-semibold text-green-700">
                     {items.price}
                   </h1>
+                  </div>
                   <MdDelete
                     onClick={() => removeHandler(items.id)}
                     className="text-3xl text-red-500 cursor-pointer duration-200 transition-all hover:text-red-700"
