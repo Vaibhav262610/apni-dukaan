@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import HeroSection from "./HeroSection";
 import { useProductContext } from "@/context/productcontext";
+import Footer from "./Footer";
 
 const About = () => {
   const myName = useProductContext();
@@ -13,6 +14,7 @@ const About = () => {
     <>
       <HeroSection myData={data} />
       {myName}
+      <Footer />
     </>
   );
 };

@@ -8,6 +8,8 @@ import ErrorPage from "./components/ErrorPage";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { Provider } from "react-redux";
+import store from "./store/store";
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
         @import
         url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
       </style>
-      <div>
+      <Provider store={store}>
         <Router>
           <Navbar />
           <Routes>
@@ -28,9 +30,9 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/*" element={<ErrorPage />} />
           </Routes>
-          <Footer />
+          
         </Router>
-      </div>
+      </Provider>
     </>
   );
 }

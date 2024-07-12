@@ -3,9 +3,11 @@ import { CgClose, CgMenu } from "react-icons/cg";
 import { FiShoppingCart } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const product = useSelector((state) => state.apna);
   const { user, logout, loginWithRedirect, isAuthenticated } = useAuth0();
   return (
     <>
@@ -94,11 +96,11 @@ const Navbar = () => {
                   )}
                 </li>
                 <li>
-                  <div className="cart">
+                  <div className="cart ">
                     <NavLink to="cart">
                       <FiShoppingCart className="text-xl" />
                       <div className="cart-number">
-                        <h1>10</h1>
+                        <h1>{product.length}</h1>
                       </div>
                     </NavLink>
                   </div>
