@@ -4,6 +4,7 @@
       "id": 1,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10 999.00",
       "product": "Shoes"
     },
@@ -11,6 +12,7 @@
       "id": 2,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/d16f2502d79f4be7a40af7704fba108e_9366/Adilette_Slides_Black_IG8941_01_standard.jpg",
       "productName": "Adilette Slides",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹4 999.00",
       "product": "Shoes"
     },
@@ -18,6 +20,7 @@
       "id": 3,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/e745acb29cd248e8994a6820a4ac6a29_9366/Gazelle_Shoes_Yellow_IF5937_01_standard.jpg",
       "productName": "Gazelle Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹11 999.00",
       "product": "Shoes"
     },
@@ -25,6 +28,7 @@
       "id": 4,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/138c68d541fb4b509abcca776d1f8ba0_9366/OZWEEGO_Shoes_Grey_IF6495_01_standard.jpg",
       "productName": "OZWEEGO Shoes  ",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹12 999.00",
       "product": "Shoes"
     },
@@ -32,6 +36,7 @@
       "id": 5,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/16f52760661047a0933a64c2985de461_9366/OZWEEGO_Shoes_White_IF6494_01_standard.jpg",
       "productName": "OZWEEGO Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹12 999.00",
       "product": "Shoes"
     },
@@ -39,6 +44,7 @@
       "id": 6,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/b5676d82f73d4da1a49a03450448c6cc_9366/Superstar_XLG_Shoes_White_IF6144_01_standard.jpg",
       "productName": "Superstar XLG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹11 999.00",
       "product": "Shoes"
     },
@@ -46,6 +52,7 @@
       "id": 7,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/e745acb29cd248e8994a6820a4ac6a29_9366/Gazelle_Shoes_Yellow_IF5937_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -53,6 +60,7 @@
       "id": 8,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -60,6 +68,7 @@
       "id": 9,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -67,6 +76,7 @@
       "id": 10,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -74,6 +84,7 @@
       "id": 11,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -81,6 +92,7 @@
       "id": 12,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -88,6 +100,7 @@
       "id": 13,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -95,6 +108,7 @@
       "id": 14,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -102,6 +116,7 @@
       "id": 15,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -109,6 +124,7 @@
       "id": 16,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -116,6 +132,7 @@
       "id": 17,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -123,6 +140,7 @@
       "id": 18,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -130,6 +148,7 @@
       "id": 19,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -137,6 +156,7 @@
       "id": 20,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -144,6 +164,7 @@
       "id": 21,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -151,6 +172,7 @@
       "id": 22,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -158,6 +180,7 @@
       "id": 23,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     },
@@ -165,6 +188,7 @@
       "id": 24,
       "productImage": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a692cfa9a74b44c88c69ee4297bcdb8c_9366/Samba_OG_Shoes_White_IG9030_01_standard.jpg",
       "productName": "SambaOG Shoes",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente cupiditate molestias maiores nemo. Quas quo deleniti neque eum accusamus est aliquam saepe repudiandae nihil sed, sequi, odio necessitatibus quae?",
       "price": "₹10,400",
       "product": "Shoes"
     }

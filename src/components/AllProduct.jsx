@@ -25,7 +25,7 @@ const AllProductPage = (props) => {
             return (
               <>
                 <main key={val.id} className="box ">
-                  <NavLink to={`/SingleProduct/${val.productName}`}>
+                  <NavLink to={`/SingleProduct/${val.id}`}>
                     <div className="relative flex flex-col ">
                       <img src={val.productImage} height={300} width={300} />
                       <div className="absolute h-full items-end flex">

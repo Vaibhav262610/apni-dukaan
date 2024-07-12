@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <>
-      <div className="dark:bg-white bg-black pt-40 gap-12 flex justify-center items-center flex-col main-contact">
+      <div className=" pt-40 gap-12 flex justify-center items-center flex-col main-contact">
         <h1 className="text-3xl font-semibold">Feel Free To Contact Us</h1>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7047.4347509001445!2d79.74474641614678!3d27.971940546422015!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1719314108370!5m2!1sen!2sin"
@@ -62,3 +62,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
