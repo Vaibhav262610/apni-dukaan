@@ -16,7 +16,7 @@ const HeroSection = ({ myData }) => {
   return (
     <>
       <div className={`${darkMode && "dark"}`}>
-        <div className="hero-section dark:transition-all dark:text-white dark:bg-black h-screen items-center flex  justify-center">
+        <div className="hero-section  dark:transition-all dark:text-white dark:bg-black h-screen items-center flex  justify-center">
           <div className="flex w-5/12 hero-section-width  ">
             <div className="flex flex-col ">
               <h1 className=" w-fit">Welcome to</h1>
@@ -38,11 +38,10 @@ const HeroSection = ({ myData }) => {
               </button> */}
               {isAuthenticated ? (
                 <div className="flex gap-8">
-                  <NavLink to="/products">
+                  <NavLink to="/product">
                     <button className="shop-btn mt-8  font-semibold w-fit">
                       Shop Now
                     </button>
-                    <img src={user.picture} className="profile-pic" alt="" />
                   </NavLink>
                 </div>
               ) : (
@@ -55,13 +54,21 @@ const HeroSection = ({ myData }) => {
               )}
             </div>
           </div>
-
-          {/* <div className="dark-mode text-4xl">
-           
-          </div> */}
-          {/* <div className="flex  w-5/12  flex-col justify-center items-center">
-            <h1 className="">IMAGE NOT LOADED</h1>
-            </div> */}
+          <div className="ml-40">
+            {isAuthenticated ? (
+              <div className="flex gap-8">
+                <div className="flex   flex-col justify-center items-center">
+                  <img
+                    src={user.picture}
+                    className="w-40 rounded-full"
+                    alt=""
+                  />
+                </div>
+              </div>
+            ) : (
+              <div></div>
+            )}
+          </div>
         </div>
       </div>
     </>
