@@ -16,7 +16,7 @@ const HeroSection = ({ myData }) => {
   return (
     <>
       <div className={`${darkMode && "dark"}`}>
-        <div className="hero-section  dark:transition-all dark:text-white dark:bg-black h-screen items-center flex  justify-center">
+        <div className="hero-section gap-20 md:gap-2 flex-col md:flex-row  dark:transition-all dark:text-white dark:bg-black h-screen items-center flex  justify-center">
           <div className="flex w-5/12 hero-section-width  ">
             <div className="flex flex-col ">
               <h1 className=" w-fit">Welcome to</h1>
@@ -54,13 +54,13 @@ const HeroSection = ({ myData }) => {
               )}
             </div>
           </div>
-          <div className="ml-40">
+          <div className="ml-0 md:ml-40">
             {isAuthenticated ? (
               <div className="flex gap-8">
-                <div className="flex   flex-col justify-center items-center">
+                <div className="flex  flex-col justify-center items-center">
                   <img
                     src={user.picture}
-                    className="w-40 rounded-full"
+                    className=" w-40 rounded-full"
                     alt=""
                   />
                 </div>
