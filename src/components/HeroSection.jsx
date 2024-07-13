@@ -5,9 +5,10 @@ import { FiShoppingCart } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 const HeroSection = ({ myData }) => {
-  const { user, isAuthenticated } = useAuth0();
+  const { user, isAuthenticated, logout, loginWithRedirect } = useAuth0();
   const [darkMode, setDarkMode] = useState(false);
   const { name } = myData;
+
   const toggleMode = () => {
     setDarkMode(!darkMode);
   };
@@ -32,9 +33,26 @@ const HeroSection = ({ myData }) => {
                 soluta quos enim voluptatem illo aspernatur temporibus veniam!
                 Sunt reiciendis repellendus aliquid nesciunt?
               </p>
-              <button className="shop-btn mt-8  font-semibold w-fit">
+              {/* <button className="shop-btn mt-8  font-semibold w-fit">
                 Shop Now
-              </button>
+              </button> */}
+              {isAuthenticated ? (
+                <div className="flex gap-8">
+                  <NavLink to="/products">
+                    <button className="shop-btn mt-8  font-semibold w-fit">
+                      Shop Now
+                    </button>
+                    <img src={user.picture} className="profile-pic" alt="" />
+                  </NavLink>
+                </div>
+              ) : (
+                <button
+                  className="shop-btn mt-8  font-semibold w-fit"
+                  onClick={() => loginWithRedirect()}
+                >
+                  Log In
+                </button>
+              )}
             </div>
           </div>
 
@@ -46,7 +64,6 @@ const HeroSection = ({ myData }) => {
             </div> */}
         </div>
       </div>
-      
     </>
   );
 };
