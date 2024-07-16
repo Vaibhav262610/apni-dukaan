@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { CgClose, CgMenu } from "react-icons/cg";
-import { FiShoppingCart } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
-import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const { user, logout, loginWithRedirect, isAuthenticated } = useAuth0();
   return (
     <>
       <div className="bg-gray-200 flex z-50  justify-center fixed w-full">
@@ -77,25 +74,13 @@ const Navbar = () => {
                 <li>
                   {isAuthenticated ? (
                     <div className="flex gap-8">
-                      <button
-                        className="btn"
-                        onClick={() =>
-                          logout({
-                            logoutParams: { returnTo: window.location.origin },
-                          })
-                        }
-                      >
-                        Log Out
-                      </button>
-                      <img src={user.picture} className="profile-pic" alt="" />
+                      <button className="btn">Log Out</button>
+                      {/* <img src={user.picture} className="profile-pic" alt="" /> */}
                     </div>
                   ) : (
-                    <button className="btn" onClick={() => loginWithRedirect()}>
-                      Log In
-                    </button>
+                    <button className="btn">Log In</button>
                   )}
                 </li>
-              
               </ul>
 
               <div className="mobile-navbar-btn">

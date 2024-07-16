@@ -1,28 +1,22 @@
-import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
 import { useState } from "react";
-import { FiShoppingCart } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 const HeroSection = ({ myData }) => {
-  const { user, isAuthenticated, logout, loginWithRedirect } = useAuth0();
-  const [darkMode, setDarkMode] = useState(false);
-  const { name } = myData;
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
 
-  const toggleMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const name = "vaibhav"
 
   return (
     <>
-      <div className={`${darkMode && "dark"}`}>
+      <div className="">
         <div className="hero-section flex-col md:flex-row  dark:transition-all dark:text-white dark:bg-black h-screen items-center flex  justify-center">
           <div className="flex w-5/12 hero-section-width  ">
             <div className="flex flex-col ">
               <h1 className=" w-fit">Welcome to</h1>
               {isAuthenticated ? (
                 <h1 className="text-3xl w-fit  font-bold uppercase ">
-                  {user.name}'s Store
+                  {name}'s Store
                 </h1>
               ) : (
                 <h1 className="text-3xl w-fit  font-bold ">Your Store</h1>
@@ -45,17 +39,13 @@ const HeroSection = ({ myData }) => {
                   </NavLink>
                 </div>
               ) : (
-                <button
-                  className="shop-btn mt-8  font-semibold w-fit"
-                  onClick={() => loginWithRedirect()}
-                >
+                <button className="shop-btn mt-8  font-semibold w-fit">
                   Log In
                 </button>
               )}
             </div>
           </div>
         </div>
-          
       </div>
     </>
   );

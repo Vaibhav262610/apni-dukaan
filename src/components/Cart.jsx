@@ -1,13 +1,35 @@
 import { remove } from "@/store/userSlice";
-import React from "react";
+import { Sun } from "lucide-react";
+import React, { useState } from "react";
+import { FiMinusCircle, FiPlusCircle } from "react-icons/fi";
 import { IoRemoveCircleSharp } from "react-icons/io5";
 import { MdDelete } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 
 const Cart = () => {
   const products = useSelector((state) => state.apna);
+  // for (let i = 0; i <= products.length; i++) {
+
+  // }
+  // console.log(products[0]);
+  let sum = 0;
+
+  for (let i = 0; i < products.length; i++) {
+    sum += Number(products[i].price);
+  }
+  console.log(sum);
 
   const dispatch = useDispatch();
+
+  // const [count, setCount] = useState(1);
+
+  // const increament = () => {
+  //   setCount(count + 1);
+  // };
+
+  // const decreament = () => {
+  //   setCount(count + 1);
+  // };
 
   const removeHandler = (productId) => {
     dispatch(remove(productId));
@@ -25,7 +47,7 @@ const Cart = () => {
             <h1 mt-12>Your Cart is empty ☹️</h1>
           </div>
         )}
-        <div className="flex gap-4 items-center flex-col justify-center mt-12">
+        <div className="py-12 flex gap-4 items-center flex-col justify-center ">
           {products.map((items) => {
             return (
               <>
@@ -37,11 +59,21 @@ const Cart = () => {
                     alt=""
                   />
                   <div className="flex flex-col md:flex-row gap-1 md:gap-8">
-
-                  <h1 className="font-semibold">{items.productName}</h1>
-                  <h1 className="font-semibold text-green-700">
-                    {items.price}
-                  </h1>
+                    <h1 className="font-semibold">{items.productName}</h1>
+                    <h1 className="font-semibold text-green-700">
+                      `${items.price}`
+                    </h1>
+                    <div className="flex items-center gap-2 ">
+                      <FiMinusCircle
+                        // onClick={decreament}
+                        className="text-xl  cursor-pointer hover:text-red-500"
+                      />
+                      <h1 className="text-xl">{items.id}</h1>
+                      <FiPlusCircle
+                        // onClick={increament}
+                        className="text-xl  cursor-pointer hover:text-green-500"
+                      />
+                    </div>
                   </div>
                   <MdDelete
                     onClick={() => removeHandler(items.id)}
@@ -51,6 +83,11 @@ const Cart = () => {
               </>
             );
           })}
+        </div>
+        <div className=" bg-white  pb-7 fixed bottom-0 w-full flex justify-center">
+          <h1 className="text-2xl bg-green-200 py-2 w-full text-center font-bold">
+            Total : $ {sum}
+          </h1>
         </div>
       </div>
     </>
