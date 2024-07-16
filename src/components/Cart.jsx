@@ -5,6 +5,7 @@ import { FiMinusCircle, FiPlusCircle } from "react-icons/fi";
 import { IoRemoveCircleSharp } from "react-icons/io5";
 import { MdDelete } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 const Cart = () => {
   const products = useSelector((state) => state.apna);
@@ -84,11 +85,13 @@ const Cart = () => {
             );
           })}
         </div>
-        <div className=" bg-white flex-col pb-7 sm:pb-12 fixed bottom-0 w-full flex justify-center">
+        <div className=" bg-white flex-col pb-7 items-center gap-2 sm:pb-12 fixed bottom-0 w-full flex justify-center">
           <h1 className="text-2xl bg-green-200 py-2 w-full text-center font-bold">
             Total : $ {sum}
           </h1>
-          <button className="btn ">Place Order</button>
+          <NavLink to='/placedorder'>
+            <button className="btn w-full sm:w-fit ">Place Order</button>\
+          </NavLink>
         </div>
       </div>
     </>
