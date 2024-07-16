@@ -84,10 +84,11 @@ const Cart = () => {
             );
           })}
         </div>
-        <div className=" bg-white  pb-7 fixed bottom-0 w-full flex justify-center">
+        <div className=" bg-white flex-col pb-7 sm:pb-12 fixed bottom-0 w-full flex justify-center">
           <h1 className="text-2xl bg-green-200 py-2 w-full text-center font-bold">
             Total : $ {sum}
           </h1>
+          <button className="btn ">Place Order</button>
         </div>
       </div>
     </>
