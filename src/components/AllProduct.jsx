@@ -24,7 +24,7 @@ const AllProductPage = (props) => {
       {loader ? (
         <div className="pt-40 flex flex-col justify-center items-center pb-24">
           <h1 className="text-4xl uppercase font-black">PRODUCTS</h1>
-          <div className="flex h-max   pt-20  gap-2 w-full flex-wrap justify-center items-c   enter border-l-orange-400">
+          <div className="flex h-max   pt-20  gap-2 w-full flex-wrap justify-center items-center border-l-orange-400">
             {props.data.productData.map((val) => {
               return (
                 <div key={val.id}>

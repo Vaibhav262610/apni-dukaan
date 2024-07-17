@@ -51,11 +51,11 @@ const Cart = () => {
             <h1 mt-12>Your Cart </h1>
           </div>
         ) : (
-          <div className="uppercase text-3xl  flex h-screen items-center justify-center font-bold  ">
+          <div className="uppercase text-3xl flex h-screen items-center justify-center font-bold  ">
             <h1 mt-12>Your Cart is empty ☹️</h1>
           </div>
         )}
-        <div className="py-8 flex overflow-y-scroll  Cart-items gap-4 items-center flex-col justify-center ">
+        <div className="py-8 flex  overflow-y-scroll Cart-items gap-4 items-center flex-col  ">
           {products.map((items) => {
             return (
               <>
