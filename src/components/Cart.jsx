@@ -8,12 +8,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 const Cart = () => {
+  const [count, setCount] = useState(1);
   let products = useSelector((state) => state.apna);
-  // for (let i = 0; i <= products.length; i++) {
-  
 
-  // }
-  // console.log(products[0]);
   let sum = 0;
   let finalPrice = 0;
   for (let i = 0; i < products.length; i++) {
@@ -25,15 +22,13 @@ const Cart = () => {
 
   const dispatch = useDispatch();
 
-  // const [count, setCount] = useState(1);
+  const increament = () => {
+    setCount(count + 1);
+  };
 
-  // const increament = () => {
-  //   setCount(count + 1);
-  // };
-
-  // const decreament = () => {
-  //   setCount(count + 1);
-  // };
+  const decreament = () => {
+    setCount(count - 1);
+  };
 
   const removeHandler = (productId) => {
     dispatch(remove(productId));
@@ -56,7 +51,7 @@ const Cart = () => {
             <h1 mt-12>Your Cart is empty ☹️</h1>
           </div>
         )}
-        <div className="py-8 flex  overflow-y-scroll Cart-items gap-4 items-center flex-col  ">
+        <div className="py-8 flex  overflow-y-scroll md:h-[30rem] Cart-items gap-4 items-center flex-col  ">
           {products.map((items) => {
             return (
               <>
@@ -74,12 +69,12 @@ const Cart = () => {
                     </h1>
                     <div className="flex items-center gap-2 ">
                       <FiMinusCircle
-                        // onClick={decreament}
+                        onClick={decreament}
                         className="text-xl  cursor-pointer hover:text-red-500"
                       />
-                      <h1 className="text-xl">{items.id}</h1>
+                      <h1 className="text-xl">{count}</h1>
                       <FiPlusCircle
-                        // onClick={increament}
+                        onClick={increament}
                         className="text-xl  cursor-pointer hover:text-green-500"
                       />
                     </div>

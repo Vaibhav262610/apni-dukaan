@@ -12,6 +12,8 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 import CartLogo from "./components/CartLogo";
 import PlacedOrder from "./components/PlacedOrder";
+import SignUp from "./components/auth/SignUp";
+import LogIn from "./components/auth/LogIn";
 
 function App() {
   return (
@@ -33,8 +35,9 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/*" element={<ErrorPage />} />
             <Route path="/placeorder" element={<PlacedOrder />} />
+            <Route path="/login" element={<LogIn />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
-          
         </Router>
       </Provider>
     </>

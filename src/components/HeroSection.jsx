@@ -3,9 +3,9 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const HeroSection = ({ myData }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const name = "vaibhav"
+  const name = "vaibhav";
 
   return (
     <>
@@ -39,9 +39,11 @@ const HeroSection = ({ myData }) => {
                   </NavLink>
                 </div>
               ) : (
-                <button className="shop-btn mt-8  font-semibold w-fit">
-                  Log In
-                </button>
+                <NavLink to="/login">
+                  <button className="shop-btn mt-8  font-semibold w-fit">
+                    Log In
+                  </button>
+                </NavLink>
               )}
             </div>
           </div>

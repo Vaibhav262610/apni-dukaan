@@ -78,7 +78,9 @@ const Navbar = () => {
                       {/* <img src={user.picture} className="profile-pic" alt="" /> */}
                     </div>
                   ) : (
-                    <button className="btn">Log In</button>
+                    <NavLink to="/login">
+                      <button className="btn">Log In</button>
+                    </NavLink>
                   )}
                 </li>
               </ul>

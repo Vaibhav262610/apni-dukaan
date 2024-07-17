@@ -13,7 +13,7 @@ const PlacedOrder = () => {
       <div className="h-screen w-full flex justify-center items-center">
         {loader ? (
           <div className=" flex flex-col gap-2 items-center">
-            <h1 className=" text-3xl font-bold ">CONGRATULATOINS!!</h1>
+            <h1 className=" text-3xl font-bold ">CONGRATULATIONS!!</h1>
             <h1 className="text-2xl font-semibold text-green-800">
               {" "}
               YOUR ORDER PLACED 👏

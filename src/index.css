@@ -286,6 +286,12 @@ body {
 }
 
 
+.login-input{
+     
+  border: 1px solid black;
+}
+
+
 .gooey {
   position: absolute;
   top: 50%;
