@@ -75,9 +75,6 @@
   }
 }
 
-
-
-
 body {
   font-family: "Raleway", sans-serif;
 }
@@ -89,7 +86,7 @@ body {
   background-color: rgb(157, 77, 255);
 }
 
-.footer{
+.footer {
   background-color: rgb(3, 3, 65);
   margin-top: 8rem;
 }
@@ -100,13 +97,12 @@ body {
   background-color: rgb(123, 52, 247);
 }
 
-.footer-icons{
+.footer-icons {
   border: 1px solid white;
   padding: 5px;
   font-size: 2rem;
   border-radius: 50%;
 }
-
 
 .logo {
   /* background-color: red; */
@@ -138,7 +134,7 @@ body {
 
 .mobile-navbar-btn {
   display: none;
-  .close-btn{
+  .close-btn {
     display: none;
   }
 }
@@ -147,17 +143,13 @@ body {
   display: none;
 }
 
-
-
-
 @media only screen and (max-width: 768px) {
-
-  .mobile-navbar-btn{
+  .mobile-navbar-btn {
     display: inline-block;
     z-index: 999;
   }
 
-  .active .nav-menu{
+  .active .nav-menu {
     display: none;
     position: absolute;
     /* top: 30%; */
@@ -166,18 +158,18 @@ body {
     z-index: 999;
   }
 
-  .active .close-btn{
+  .active .close-btn {
     display: inline-block;
   }
 
-  .active .nav-buttons{
+  .active .nav-buttons {
     visibility: visible;
     opacity: 1;
     transform: translateX(0);
     z-index: 999;
   }
-  
-  .hero-section-width{
+
+  .hero-section-width {
     width: 80%;
   }
 
@@ -198,22 +190,20 @@ body {
   .cart {
     display: none;
   }
-  .logo{
+  .logo {
     font-size: 13px;
   }
 
-  .footer{
+  .footer {
     display: none;
   }
-  .main-contact{
+  .main-contact {
     padding-top: 7rem;
   }
-  .google-map{
+  .google-map {
     height: 400px;
-
   }
 }
-
 
 /* width */
 ::-webkit-scrollbar {
@@ -222,13 +212,13 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color:  rgb(90, 78, 255);
+  background-color: rgb(90, 78, 255);
   border-radius: 10px;
 }
 
@@ -237,8 +227,7 @@ body {
   background-color: rgb(157, 77, 255);
 }
 
-
-.contact-input{
+.contact-input {
   border: 1px solid rgb(89, 89, 89);
   box-shadow: 3px 3px;
   -webkit-user-select: none; /* Safari */
@@ -246,18 +235,18 @@ body {
   user-select: none; /* Standard syntax */
 }
 
-.contact-btn{
+.contact-btn {
   padding: 10px 40px;
   color: white;
   background-color: rgb(157, 77, 255);
   width: fit-content;
 }
-.contact-btn:hover{
+.contact-btn:hover {
   padding: 10px 40px;
   color: white;
   background-color: rgb(125, 60, 203);
   width: fit-content;
-  transition:all 0.2s;
+  transition: all 0.2s;
 }
 
 /* .contact-form{
@@ -265,30 +254,83 @@ body {
   padding: 12px;
 } */
 
-.dark-mode{
+.dark-mode {
   background-color: rgb(161, 85, 255);
   width: fit-content;
   padding: 1rem;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: inset 0 0 10px grey; 
-  position: absolute; 
+  box-shadow: inset 0 0 10px grey;
+  position: absolute;
   right: 4%;
   bottom: 6%;
   position: fixed;
-  
 }
 
-.profile-pic{
+.profile-pic {
   border-radius: 50%;
   width: 45px;
   height: 45px;
   border: 3px solid rgb(0, 0, 0);
   cursor: pointer;
-  
+}
+
+.box:hover {
+  border: 1px solid black;
 }
 
 
-.box:hover{
-  border: 1px solid black;
+.Cart-items {
+  padding-top: 23rem;
+  height: 35rem;
+}
+
+
+.gooey {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 142px;
+  height: 40px;
+  margin: -20px 0 0 -71px;
+  background: white;
+  filter: contrast(20);
+}
+.dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  filter: blur(4px);
+  background: rgb(255, 0, 0);
+  border-radius: 50%;
+  transform: translateX(0);
+  animation: dot 2.8s infinite;
+}
+.dots {
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  animation: dots 2.8s infinite;
+  span {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-left: 16px;
+    filter: blur(4px);
+    background: #000;
+    border-radius: 50%;
+  }
+}
+@keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
 }

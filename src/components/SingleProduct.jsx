@@ -5,16 +5,14 @@ import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 const SingleProduct = () => {
-
   const { id } = useParams();
   const myProduct = productList.productData[id - 1];
-  
-  const dispatch = useDispatch()
+
+  const dispatch = useDispatch();
 
   const addCart = (myProduct) => {
-    dispatch(add(myProduct))
-  }
-
+    dispatch(add(myProduct));
+  };
 
   return (
     <>
@@ -31,7 +29,7 @@ const SingleProduct = () => {
             <h1 className="text-4xl font-semibold">{myProduct.productName}</h1>
             <div className="flex flex-col">
               <h1 className="font-semibold text-gray-400 text-xl">PRICE</h1>
-              <h1 className=" text-3xl text-green-700">{myProduct.price}</h1>
+              <h1 className=" text-3xl text-green-700">$ {myProduct.price}</h1>
             </div>
             <div className="flex flex-col">
               <h1 className="uppercase text-gray-400 font-semibold text-xl">

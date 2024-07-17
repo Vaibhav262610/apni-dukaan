@@ -8,17 +8,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 const Cart = () => {
-  const products = useSelector((state) => state.apna);
+  let products = useSelector((state) => state.apna);
   // for (let i = 0; i <= products.length; i++) {
 
   // }
   // console.log(products[0]);
   let sum = 0;
-
+  let finalPrice = 0;
   for (let i = 0; i < products.length; i++) {
     sum += Number(products[i].price);
+    finalPrice = sum.toFixed(2);
+    console.log(finalPrice);
   }
-  console.log(sum);
+  // console.log(sum);
 
   const dispatch = useDispatch();
 
@@ -36,6 +38,11 @@ const Cart = () => {
     dispatch(remove(productId));
   };
 
+  // const clearCart = () => {
+  //   products = []
+  //   console.log(products);
+  // }
+
   return (
     <>
       <div>
@@ -48,7 +55,7 @@ const Cart = () => {
             <h1 mt-12>Your Cart is empty ☹️</h1>
           </div>
         )}
-        <div className="py-12 flex gap-4 items-center flex-col justify-center ">
+        <div className="py-8 flex overflow-y-scroll  Cart-items gap-4 items-center flex-col justify-center ">
           {products.map((items) => {
             return (
               <>
@@ -85,14 +92,18 @@ const Cart = () => {
             );
           })}
         </div>
-        <div className=" bg-white flex-col pb-7 items-center gap-2 sm:pb-12 fixed bottom-0 w-full flex justify-center">
-          <h1 className="text-2xl bg-green-200 py-2 w-full text-center font-bold">
-            Total : $ {sum}
-          </h1>
-          <NavLink to='/placedorder'>
-            <button className="btn w-full sm:w-fit ">Place Order</button>\
-          </NavLink>
-        </div>
+        {products.length > 0 ? (
+          <div className=" bg-white flex-col pb-7 items-center gap-2 sm:pb-12 fixed bottom-0 w-full flex justify-center">
+            <h1 className="text-2xl bg-green-200 py-2 w-full text-center font-bold">
+              Total : $ {finalPrice}
+            </h1>
+            <NavLink to="/placeorder">
+              <button className="btn w-full sm:w-fit ">Place Order</button>
+            </NavLink>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </>
   );

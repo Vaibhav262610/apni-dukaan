@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import CartLogo from "./components/CartLogo";
+import PlacedOrder from "./components/PlacedOrder";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/singleproduct/:id" element={<SingleProduct />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/*" element={<ErrorPage />} />
+            <Route path="/placeorder" element={<PlacedOrder />} />
           </Routes>
           
         </Router>
