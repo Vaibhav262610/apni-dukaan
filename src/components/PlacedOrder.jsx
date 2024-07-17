@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const PlacedOrder = () => {
   const [loader, setLoader] = useState(false);
@@ -11,8 +12,15 @@ const PlacedOrder = () => {
     <>
       <div className="h-screen w-full flex justify-center items-center">
         {loader ? (
-          <div>
-            <h1>ORDER PLACED</h1>
+          <div className=" flex flex-col gap-2 items-center">
+            <h1 className=" text-3xl font-bold ">CONGRATULATOINS!!</h1>
+            <h1 className="text-2xl font-semibold text-green-800">
+              {" "}
+              YOUR ORDER PLACED 👏
+            </h1>
+            <NavLink to="/">
+              <button className="btn mt-12">Continue Shopping</button>
+            </NavLink>
           </div>
         ) : (
           <div>

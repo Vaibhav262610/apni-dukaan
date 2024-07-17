@@ -10,6 +10,7 @@ import { NavLink } from "react-router-dom";
 const Cart = () => {
   let products = useSelector((state) => state.apna);
   // for (let i = 0; i <= products.length; i++) {
+  
 
   // }
   // console.log(products[0]);
