@@ -1,9 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
-
 const initialState = {
   adminAccess: false,
+  userName: "",
 };
 
 const userSlice = createSlice({
@@ -17,7 +16,8 @@ const userSlice = createSlice({
       return state.filter((item) => item.id !== action.payload);
     },
     setAdminAccess: (state, action) => {
-      state.adminAccess = action.payload;
+      state.adminAccess = action.payload.adminAccess;
+      state.userName = action.payload.userName;
     },
   },
 });

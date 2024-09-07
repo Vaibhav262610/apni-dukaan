@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { CgClose, CgMenu } from "react-icons/cg";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const adminAccess = useSelector((state) => state.apna.adminAccess);
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
     <>
@@ -72,7 +74,7 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  {isAuthenticated ? (
+                  {adminAccess ? (
                     <div className="flex gap-8">
                       <button className="btn">Log Out</button>
                       {/* <img src={user.picture} className="profile-pic" alt="" /> */}

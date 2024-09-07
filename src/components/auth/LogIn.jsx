@@ -20,21 +20,22 @@ const LogIn = () => {
 
   const formData = () => {
     let isValid = false;
+    let userName = "";
 
-    // Check if any email matches
     Admin.adminData.forEach((items) => {
       if (email === items.email) {
         console.log(`Email match found for ${items.name}`);
-        isValid = true; // Set valid if the email matches
+        isValid = true;
+        userName = items.name;
       }
     });
 
-    dispatch(setAdminAccess(isValid)); // Dispatch the result to set adminAccess
+    dispatch(setAdminAccess({ adminAccess: isValid, userName }));
 
     if (isValid) {
-      navigate("/admin"); // Navigate to /admin if valid
+      navigate("/");
     } else {
-      navigate("/"); // Navigate to home if not valid
+      navigate("/");
     }
 
     setEmail("");
@@ -67,7 +68,14 @@ const LogIn = () => {
                 placeholder="Enter your Password Here"
               />
               {/* <NavLink to={formData} className="btn text-center"> */}
-                <button onClick={formData} className="btn">Submit</button>
+              <button onClick={formData} className="btn">
+                Submit
+              </button>
+              <NavLink to="/signup">
+                <h1 className="font-bold cursor-pointer text-sm text-center">
+                  Doesn't have an account? Create New
+                </h1>
+              </NavLink>
               {/* </NavLink> */}
             </div>
           </div>

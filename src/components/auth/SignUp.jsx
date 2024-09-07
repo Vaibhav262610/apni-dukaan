@@ -2,7 +2,11 @@ import React from 'react'
 
 const SignUp = () => {
   return (
-    <div>SignUp</div>
+    <>
+      <div className='h-screen w-full flex justify-center items-center'>
+        Sign Up
+      </div>
+    </>
   )
 }
 
