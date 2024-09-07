@@ -1,4 +1,4 @@
-import { remove } from "@/store/userSlice";
+import { remove , clearCart} from "@/store/userSlice";
 import { Sun } from "lucide-react";
 import React, { useState } from "react";
 import { FiMinusCircle, FiPlusCircle } from "react-icons/fi";
@@ -16,9 +16,14 @@ const Cart = () => {
   for (let i = 0; i < products.length; i++) {
     sum += Number(products[i].price);
     finalPrice = sum.toFixed(2);
-    console.log(finalPrice);
+    // console.log(finalPrice);
   }
   // console.log(sum);
+  // console.log(products);
+
+  const clearCart = () => {
+    dispatch(clearCart());
+  };
 
   const dispatch = useDispatch();
 
@@ -44,47 +49,43 @@ const Cart = () => {
       <div>
         {products.length > 0 ? (
           <div className="uppercase text-3xl pt-32 flex justify-center font-bold  ">
-            <h1 mt-12>Your Cart </h1>
+            <h1 className="mt-12">Your Cart </h1>
           </div>
         ) : (
           <div className="uppercase text-3xl flex h-screen items-center justify-center font-bold  ">
-            <h1 mt-12>Your Cart is empty ☹️</h1>
+            <h1 className="mt-12">Your Cart is empty ☹️</h1>
           </div>
         )}
         <div className="py-8 flex  overflow-y-scroll md:h-[30rem] Cart-items gap-4 items-center flex-col  ">
           {products.map((items) => {
             return (
-              <>
-                <div className="flex flex-wrap  items-center bg-gray-200 w-11/12 md:w-9/12 justify-around rounded-md">
-                  <img
-                    src={items.productImage}
-                    height={100}
-                    width={100}
-                    alt=""
-                  />
-                  <div className="flex flex-col md:flex-row gap-1 md:gap-8">
-                    <h1 className="font-semibold">{items.productName}</h1>
-                    <h1 className="font-semibold text-green-700">
-                      `${items.price}`
-                    </h1>
-                    <div className="flex items-center gap-2 ">
-                      <FiMinusCircle
-                        onClick={decreament}
-                        className="text-xl  cursor-pointer hover:text-red-500"
-                      />
-                      <h1 className="text-xl">{count}</h1>
-                      <FiPlusCircle
-                        onClick={increament}
-                        className="text-xl  cursor-pointer hover:text-green-500"
-                      />
-                    </div>
+              <div
+                key={items.id}
+                className="flex flex-wrap  items-center bg-gray-200 w-11/12 md:w-9/12 justify-around rounded-md"
+              >
+                <img src={items.productImage} height={100} width={100} alt="" />
+                <div className="flex flex-col md:flex-row gap-1 md:gap-8">
+                  <h1 className="font-semibold">{items.productName}</h1>
+                  <h1 className="font-semibold text-green-700">
+                    `${items.price}`
+                  </h1>
+                  <div className="flex items-center gap-2 ">
+                    <FiMinusCircle
+                      onClick={decreament}
+                      className="text-xl  cursor-pointer hover:text-red-500"
+                    />
+                    <h1 className="text-xl">{count}</h1>
+                    <FiPlusCircle
+                      onClick={increament}
+                      className="text-xl  cursor-pointer hover:text-green-500"
+                    />
                   </div>
-                  <MdDelete
-                    onClick={() => removeHandler(items.id)}
-                    className="text-3xl text-red-500 cursor-pointer duration-200 transition-all hover:text-red-700"
-                  />
                 </div>
-              </>
+                <MdDelete
+                  onClick={() => removeHandler(items.id)}
+                  className="text-3xl text-red-500 cursor-pointer duration-200 transition-all hover:text-red-700"
+                />
+              </div>
             );
           })}
         </div>
@@ -94,7 +95,9 @@ const Cart = () => {
               Total : $ {finalPrice}
             </h1>
             <NavLink to="/placeorder">
-              <button className="btn w-full sm:w-fit ">Place Order</button>
+              <button onClick={clearCart} className="btn w-full sm:w-fit ">
+                Place Order
+              </button>
             </NavLink>
           </div>
         ) : (

@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 const CartLogo = () => {
-  const product = useSelector((state) => state.apna);
+  const product = useSelector((state) => state.apna.apna);
   return (
     <>
       <div className="fixed z-50 bottom-5 right-5  md:bottom-12 md:right-12">

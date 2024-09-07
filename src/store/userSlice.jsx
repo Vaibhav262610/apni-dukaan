@@ -24,8 +24,12 @@ const userSlice = createSlice({
       state.adminAccess = false; // Reset adminAccess on logout
       state.userName = ""; // Reset userName if needed
     },
+    clearCart: (state) => {
+      state.apna = []; // Clear the products array
+    },
   },
 });
 
-export const { add, remove, setAdminAccess, logOut } = userSlice.actions;
+export const { add, remove, setAdminAccess, logOut, clearCart } =
+  userSlice.actions;
 export default userSlice.reducer;
