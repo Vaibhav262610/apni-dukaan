@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import Admin from "../adminData/Admin";
+import { useDispatch } from "react-redux";
+import { setAdminAccess } from "@/store/userSlice";
 
 const LogIn = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const [adminAccess, setadminAccess] = useState(false);
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const navigate = useNavigate(); // useNavigate hook for redirecting
 
   const handleEmail = (event) => {
     setEmail(event.target.value);
@@ -15,16 +17,25 @@ const LogIn = () => {
   const handlePass = (event) => {
     setPass(event.target.value);
   };
+
   const formData = () => {
-    if ((email == "") & (pass == "")) {
-      console.log("Please enter valid email and pass");
-    }
-    Admin.adminData.map((items) => {
-      if (email == items.email && pass == items.pass) {
-        console.log(`Welcome back ${items.name}`);
-        setadminAccess(true);
+    let isValid = false;
+
+    // Check if any email matches
+    Admin.adminData.forEach((items) => {
+      if (email === items.email) {
+        console.log(`Email match found for ${items.name}`);
+        isValid = true; // Set valid if the email matches
       }
     });
+
+    dispatch(setAdminAccess(isValid)); // Dispatch the result to set adminAccess
+
+    if (isValid) {
+      navigate("/admin"); // Navigate to /admin if valid
+    } else {
+      navigate("/"); // Navigate to home if not valid
+    }
 
     setEmail("");
     setPass("");
@@ -55,12 +66,9 @@ const LogIn = () => {
                 className="login-input px-4 py-2 rounded outline-none font-bold text-sm w-[20rem] text-gray-600"
                 placeholder="Enter your Password Here"
               />
-              <NavLink
-                to={adminAccess ? "/" : "/admin"}
-                className="btn text-center"
-              >
-                <button onClick={formData}>Submit</button>
-              </NavLink>
+              {/* <NavLink to={formData} className="btn text-center"> */}
+                <button onClick={formData} className="btn">Submit</button>
+              {/* </NavLink> */}
             </div>
           </div>
         </div>

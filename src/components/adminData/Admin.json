@@ -2,12 +2,12 @@
   "adminData": [
     {
       "email": "vabhav@gmail.com",
-      "pass": "vaibhav123",
+      "pass": "123",
       "name" : "Vaibhav"
     },
     {
-        "email": "mukul@gmail.com",
-        "pass": "vaibhav123",
+        "email": "mukul",
+        "pass": "123",
         "name" : "Mukul"
     }
   ]
