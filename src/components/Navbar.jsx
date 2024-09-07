@@ -1,12 +1,18 @@
+import { logOut } from "@/store/userSlice";
 import React, { useState } from "react";
 import { CgClose, CgMenu } from "react-icons/cg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const adminAccess = useSelector((state) => state.apna.adminAccess);
   // const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const dispatch = useDispatch(); // Initialize useDispatch
+
+  const handleLogout = () => {
+    dispatch(logOut()); // Dispatch the logOut action
+  };
 
   return (
     <>
@@ -76,7 +82,9 @@ const Navbar = () => {
                 <li>
                   {adminAccess ? (
                     <div className="flex gap-8">
-                      <button className="btn">Log Out</button>
+                      <button onClick={handleLogout} className="btn">
+                        Log Out
+                      </button>
                       {/* <img src={user.picture} className="profile-pic" alt="" /> */}
                     </div>
                   ) : (

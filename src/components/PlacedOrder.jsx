@@ -18,7 +18,7 @@ const PlacedOrder = () => {
               {" "}
               YOUR ORDER PLACED 👏
             </h1>
-            <NavLink to="/">
+            <NavLink to="/product">
               <button className="btn mt-12">Continue Shopping</button>
             </NavLink>
           </div>

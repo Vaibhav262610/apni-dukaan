@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 
 const Cart = () => {
   const [count, setCount] = useState(1);
-  let products = useSelector((state) => state.apna);
+  let products = useSelector((state) => state.apna.apna);
 
   let sum = 0;
   let finalPrice = 0;
