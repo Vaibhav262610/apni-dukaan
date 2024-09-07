@@ -1,4 +1,4 @@
-import { remove , clearCart} from "@/store/userSlice";
+import { remove, clearCart } from "@/store/userSlice";
 import { Sun } from "lucide-react";
 import React, { useState } from "react";
 import { FiMinusCircle, FiPlusCircle } from "react-icons/fi";
@@ -18,10 +18,11 @@ const Cart = () => {
     finalPrice = sum.toFixed(2);
     // console.log(finalPrice);
   }
+  // console.log(count);
   // console.log(sum);
-  // console.log(products);
+  console.log(products);
 
-  const clearCart = () => {
+  const handleClear = () => {
     dispatch(clearCart());
   };
 
@@ -95,7 +96,7 @@ const Cart = () => {
               Total : $ {finalPrice}
             </h1>
             <NavLink to="/placeorder">
-              <button onClick={clearCart} className="btn w-full sm:w-fit ">
+              <button onClick={handleClear} className="btn w-full sm:w-fit ">
                 Place Order
               </button>
             </NavLink>
