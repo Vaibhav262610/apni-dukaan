@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import Admin from "../adminData/Admin";
 
 const LogIn = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const data = [];
+  const [adminAccess, setadminAccess] = useState(false);
+  const navigate = useNavigate();
 
   const handleEmail = (event) => {
     setEmail(event.target.value);
@@ -13,11 +16,20 @@ const LogIn = () => {
     setPass(event.target.value);
   };
   const formData = () => {
-    console.log(email);
-    console.log(pass);
+    if ((email == "") & (pass == "")) {
+      console.log("Please enter valid email and pass");
+    }
+    Admin.adminData.map((items) => {
+      if (email == items.email && pass == items.pass) {
+        console.log(`Welcome back ${items.name}`);
+        setadminAccess(true);
+      }
+    });
+
     setEmail("");
     setPass("");
   };
+
   return (
     <>
       <div className="h-screen w-full bg-purple-100  flex justify-center items-center">
@@ -43,9 +55,12 @@ const LogIn = () => {
                 className="login-input px-4 py-2 rounded outline-none font-bold text-sm w-[20rem] text-gray-600"
                 placeholder="Enter your Password Here"
               />
-              <button onClick={formData} className="btn">
-                Submit
-              </button>
+              <NavLink
+                to={adminAccess ? "/" : "/admin"}
+                className="btn text-center"
+              >
+                <button onClick={formData}>Submit</button>
+              </NavLink>
             </div>
           </div>
         </div>

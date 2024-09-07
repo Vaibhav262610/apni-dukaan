@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-
+import { useLocation } from "react-router-dom";
 const HeroSection = ({ myData }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const location = useLocation();
+  console.log(location.state);
 
   const name = "vaibhav";
 

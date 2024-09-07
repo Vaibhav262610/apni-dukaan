@@ -14,6 +14,7 @@ import CartLogo from "./components/CartLogo";
 import PlacedOrder from "./components/PlacedOrder";
 import SignUp from "./components/auth/SignUp";
 import LogIn from "./components/auth/LogIn";
+import AdminPage from "./components/AdminPage";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/placeorder" element={<PlacedOrder />} />
             <Route path="/login" element={<LogIn />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/admin" element={<AdminPage/>} />
           </Routes>
         </Router>
       </Provider>

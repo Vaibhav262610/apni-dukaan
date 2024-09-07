@@ -1,0 +1,14 @@
+{
+  "adminData": [
+    {
+      "email": "vabhav@gmail.com",
+      "pass": "vaibhav123",
+      "name" : "Vaibhav"
+    },
+    {
+        "email": "mukul@gmail.com",
+        "pass": "vaibhav123",
+        "name" : "Mukul"
+    }
+  ]
+}
