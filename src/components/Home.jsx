@@ -217,10 +217,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-              Featured Products
+              Best Selling Products
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Check out our latest and trending products
+              Discover our most popular and highest-rated products
             </p>
           </div>
 
@@ -337,29 +337,6 @@ const Home = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <NavLink
-              to="/product"
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 shadow-sm hover:shadow-md"
-            >
-              View More Products
-              <svg
-                className="ml-2 -mr-1 w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </NavLink>
           </div>
         </div>
       </div>
